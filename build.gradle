@@ -43,3 +43,8 @@ downloadLicenses {
 license {
 	ignoreFailures = true
 }
+
+tasks.register('copyLicense', Copy) {
+	from layout.buildDirectory.dir("reports/license/dependency-license.json")
+	into "src/main/resources/"
+}
